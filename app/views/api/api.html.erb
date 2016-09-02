@@ -1,1 +1,17 @@
-API
+<h1>Guestbook API</h1>
+<br>
+<p> The Guestbook API allows you to view all of the entries that have been submitted to the guestbook.</p>
+<br>
+<h3>Calling</h3>
+<p> To call the API information, visit: <%= link_to "/api/messages", "/api/messages" %>
+<br>
+<br>
+The response will be in JSON format and will contain the following information:
+<ul>
+  <li>id: The ID of the entry, in descending order.</li>
+  <li>name: The name of the visitor.</li>
+  <li>message: The message left by the visitor.</li>
+  <li>created_at: The timestamp at which the message was created, in UTC.</li>
+  <li>updated_at: Identical to created_at, as entries cannot be modified.</li>
+</ul>
+</p>
