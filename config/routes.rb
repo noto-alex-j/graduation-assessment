@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get '/' => 'guestbook#new'
   post '/' => 'guestbook#create'
+  get '/api' => 'api#api'
+  get '/api/messages' => 'api#api_all'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
