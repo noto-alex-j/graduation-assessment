@@ -2,29 +2,12 @@
 <h3>Sign the guestbook and leave a brief message!</h3>
 
 <div class="form">
-  <%= form_for :post do |f| %>
-  <%= f.label :name %>
-  <br>
-  <%= f.text_field :name %>
-  <br>
-  <br>
-  <%= f.label :message %>
-  <br>
-  <%= f.text_area :message %>
-  <br>
-  <%= f.submit %>
-  <% end %>
+  <%= render 'form' %>
 </div>
 
 <br>
 <br>
 
 <div class="posts">
-  <% @posts.each do |x| %>
-  <%= x.name %> signed the guest book <%= distance_of_time_in_words(x.created_at, Time.now) %> ago:
-  <br>
-  "<%= x.message %>"
-  <br>
-  <br>
-  <% end %>
+  <%= render 'entries' %>
 </div>

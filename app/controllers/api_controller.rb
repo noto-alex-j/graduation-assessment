@@ -1,5 +1,6 @@
 class ApiController < ApplicationController
-  def api
+  def index
+    render 'api'
   end
 
   def api_all

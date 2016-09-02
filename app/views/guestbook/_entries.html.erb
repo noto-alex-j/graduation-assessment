@@ -1,0 +1,7 @@
+<% @posts.each do |x| %>
+  <%= x.name %> signed the guest book <%= distance_of_time_in_words(x.created_at, Time.now) %> ago:
+  <br>
+  "<%= x.message %>"
+  <br>
+  <br>
+<% end %>
